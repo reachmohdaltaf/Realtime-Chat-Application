@@ -25,37 +25,37 @@ This is a real-time chat application built using React, Node.js, Express.js, Soc
 
 ## Installation
 
-# 1. Clone the Repository
+### 1. Clone the Repository
 git clone https://github.com/reachmohdaltaf/Realtime-Chat-Application.git
 
-# 2. Navigate to the Project Directory
+### 2. Navigate to the Project Directory
 cd Realtime-Chat-Application
 
-# 3. Install Dependencies
+### 3. Install Dependencies
 
-# For the Frontend
+### For the Frontend
 cd frontend
 npm install
 
-# For the Backend
+### For the Backend
 cd ../backend
 npm install
 
-# 4. Configure Environment Variables
-# Create a .env file in the backend directory and add your environment variables
-# Example .env file:
-# PORT=5000
-# DB_CONNECTION_STRING=your_database_connection_string
+### 4. Configure Environment Variables
+### Create a .env file in the backend directory and add your environment variables
+### Example .env file:
+### PORT=5000
+### DB_CONNECTION_STRING=your_database_connection_string
 
-# 5. Start the Application
+### 5. Start the Application
 
-# For the Frontend
+### For the Frontend
 cd ../frontend
 npm start
 
-# For the Backend
+### For the Backend
 cd ../backend
 npm start
 
-# 6. Open Your Browser
-# Open your web browser and navigate to http://localhost:5173 to see the chat application in action.
+### 6. Open Your Browser
+### Open your web browser and navigate to http://localhost:5173 to see the chat application in action.
