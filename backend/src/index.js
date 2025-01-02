@@ -23,15 +23,13 @@ app.use(urlencoded({ extended: true }))
 app.use('/api/auth', authRoutes)
 app.use('/api/messages', messageRoutes)
 
-if (process.env.NODE_ENV === 'production') {
-    const frontendPath = path.join(__dirname, '../frontend/dist');
-    console.log('Serving frontend from:', frontendPath); // Log the resolved path for debugging
-
-    app.use(express.static(frontendPath));
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(frontendPath, 'index.html'));
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "../frontend/dist")));
+  
+    app.get("*", (req, res) => {
+      res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
     });
-}
+  }
 
 
 server.listen(PORT, ()=>{
