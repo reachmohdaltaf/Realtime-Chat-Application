@@ -1,15 +1,18 @@
 import React from "react";
 import { useAuthStore } from "../store/useAuthStore";
 import { Link } from "react-router-dom";
-import { User, Settings, LogOut, MessageCircle } from "lucide-react";
+import { User, Settings, LogOut, MessageCircle, MenuIcon } from "lucide-react";
+import { useSidebarStore } from "../store/useSidebarStore";
 
 const Navbar = () => {
+  const { toggleSidebar } = useSidebarStore(); // Access sidebar toggle function
   const { logout } = useAuthStore();
 
   return (
     <div className="h-14 bg-white text-black flex items-center border-b sticky top-0 z-10 justify-between px-4 md:px-6">
       {/* Logo Section */}
       <div className="flex items-center gap-2">
+      <MenuIcon onClick={toggleSidebar} className="cursor-pointer" />
         <Link to="/" className="font-bold text-2xl md:text-3xl">
           chat
         </Link>
